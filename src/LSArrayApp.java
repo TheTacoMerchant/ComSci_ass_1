@@ -27,9 +27,11 @@ public class LSArrayApp {
         
         File data = new File("/home/mark/javaWork/ass_1/data.txt");
         Scanner sc = new Scanner(data);
+        int i = 0;
         
-        for (int i = 0; i < data.length(); i++){
+        while (sc.hasNextLine()) {
             entries[i] = sc.nextLine();
+            i++;
         }
         sc.close();
         if (args.length == 3){
@@ -45,6 +47,7 @@ public class LSArrayApp {
         String answer = " ";
         
         for (int i = 0; i < 2976; i++){
+            
             String use = entries[i];
             String stageTry = use.substring(0, use.indexOf('_'));
             
